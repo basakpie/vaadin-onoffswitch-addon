@@ -2,8 +2,9 @@
 
 CSS3 On/Off switches with animated transitions.
 
-image::data/screenshot/onoffswitch-on.png[]
-image::data/screenshot/onoffswitch-off.png[]
+image::data/screenshot/onoffswitch-addons.jpg[]
+
+image::data/screenshot/onoffswitch-demo.jpg[]
 
 == OnOffSwitch Maven
 
