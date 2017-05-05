@@ -37,19 +37,18 @@ public class OnOffSwitch extends AbstractField<Boolean> {
 	    setValue(checked); // 서버 On/Off Value
 	}
 	
-	@Override
-	public Class<? extends Boolean> getType() {
-		return Boolean.class;
-	}
-	
     @Override
-    protected void setInternalValue(Boolean newValue) {
-        super.setInternalValue(newValue);
+    protected void doSetValue(Boolean newValue) {
         if (newValue == null) {
             newValue = false;
         }
         // 상태 필드 값을 변경 하여 OnOffSwitchConnector onStateChanged method가 call이 되도록 한다.
         getState().checked = newValue;
+    }
+    
+    @Override
+    public Boolean getValue() {
+        return getState().checked;
     }
 
     @Override
