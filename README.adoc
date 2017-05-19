@@ -50,6 +50,22 @@ onoffSwitch.addValueChangeListener(new ValueChangeListener(){
 
 ----
 
+== Customize the color of your OnOffSwitch (default: blue)
+
+[source,css,indent=0]
+----
+$green: #40b527;
+
+.onoffswitch-slider.on {
+    background-color: $green;
+    border-color: $green;
+}
+
+.onoffswitch-slider.on:before {
+    border-color: $green;
+}
+----
+
 ## Building and running demo
 
 [source,groovy,indent=0]
