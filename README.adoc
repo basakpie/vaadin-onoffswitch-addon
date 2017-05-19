@@ -29,7 +29,16 @@ image::data/screenshot/onoffswitch-demo.jpg[]
 
 [source,java,indent=0]
 ----
-OnOffSwitch onoffSwitch = new OnOffSwitch();
+final OnOffSwitch onoffSwitch = new OnOffSwitch(false);
+
+// Vaadin8
+
+onOffSwitch.addValueChangeListener(event -> {
+    boolean checked = event.getValue();
+    System.out.println("OnOffSwitch checked : " + checked);
+});
+
+// Vaadin7
 
 onoffSwitch.addValueChangeListener(new ValueChangeListener(){
     @Override
@@ -38,6 +47,7 @@ onoffSwitch.addValueChangeListener(new ValueChangeListener(){
         System.out.println("onoffSwitch checked : " + checked);
     }
 });
+
 ----
 
 ## Building and running demo
