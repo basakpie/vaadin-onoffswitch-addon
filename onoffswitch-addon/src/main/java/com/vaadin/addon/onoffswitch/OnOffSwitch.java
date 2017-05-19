@@ -29,7 +29,7 @@ public class OnOffSwitch extends AbstractField<Boolean> {
 	
 	public OnOffSwitch() {	
 		registerRpc(serverRpc); // 서버 RPC Receiver 등록
-	        setValue(Boolean.FALSE);
+	    setValue(Boolean.FALSE);
 	}
 	
 	public OnOffSwitch(boolean checked) {

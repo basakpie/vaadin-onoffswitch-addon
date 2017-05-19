@@ -7,8 +7,6 @@ import javax.servlet.annotation.WebServlet;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
-import com.vaadin.data.Property.ValueChangeEvent;
-import com.vaadin.data.Property.ValueChangeListener;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Alignment;
@@ -30,12 +28,9 @@ public class DemoUI extends UI
     protected void init(VaadinRequest request) {
 
     	final OnOffSwitch onOffSwitch = new OnOffSwitch(false);
-        onOffSwitch.addValueChangeListener(new ValueChangeListener() {
-			@Override
-			public void valueChange(ValueChangeEvent event) {
-				boolean checked = (boolean)event.getProperty().getValue();
-				System.out.println("OnOffSwitch checked : " + checked);
-			}
+        onOffSwitch.addValueChangeListener(event -> {
+            boolean checked = event.getValue();
+            System.out.println("OnOffSwitch checked : " + checked);
         });
 
         final VerticalLayout layout = new VerticalLayout();

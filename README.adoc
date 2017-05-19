@@ -2,6 +2,9 @@
 
 CSS3 On/Off switches with animated transitions.
 
+- 0.0.1 -> Vaadin6, Vaadin7 Supported
+- 1.0.0 -> Vaadin8 Supported
+
 image::data/screenshot/onoffswitch-addons.jpg[]
 
 image::data/screenshot/onoffswitch-demo.jpg[]
