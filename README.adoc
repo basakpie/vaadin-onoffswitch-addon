@@ -68,10 +68,20 @@ $green: #40b527;
 
 ## Building and running demo
 
+Linux/Mac
+
 [source,groovy,indent=0]
 ----
-mvn clean install
-mvn -pl onoffswitch-demo jetty:run
+sh mvnw clean install
+sh mvnw -pl onoffswitch-demo jetty:run
+----
+
+Windows
+
+[source,groovy,indent=0]
+----
+mvnw.cmd clean install
+mvnw.cmd -pl onoffswitch-demo jetty:run
 ----
 
 Demo Server : http://127.0.0.1:8080
