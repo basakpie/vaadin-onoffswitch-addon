@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vaadin.addon</groupId>
 	<artifactId>vaadin-onoffswitch</artifactId>
-	<packaging>jar</packaging>
+	<packaging>bundle</packaging>
 	<version>1.0.0</version>
 	<name>OnOffSwitch</name>
 
@@ -181,6 +181,19 @@
 				</executions>
 			</plugin>
 
+			<!-- Make the generated bundle OSGi compatible -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Export-Package>com.vaadin.addon.onoffswitch</Export-Package>
+						<Import-Package>!com.google.gwt.*,!com.vaadin.client.*,*</Import-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+			
 			<!-- Testing -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
